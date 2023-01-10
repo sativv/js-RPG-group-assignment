@@ -32,25 +32,28 @@ const Login = () => {
     }
   };
   return (
-    <form className="form">
-      <div>
+    <form>
+      <div className="form">
         <input
           onChange={handleChange}
           type="text"
           value={username}
           placeholder="Username"
+          className="input-field"
         />
         <input
           onChange={handleChange}
           type="text"
           //   value={password}
-          placeholder="password"
+          placeholder="Password"
+          className="input-field"
         />
+
+        <button type="submit" onClick={handleSubmit} className="form-btn">
+          Log In
+        </button>
       </div>
       ;
-      <button type="submit" onClick={handleSubmit} className="form-btn">
-        Log In
-      </button>
     </form>
   );
 };
