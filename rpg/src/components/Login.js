@@ -34,6 +34,7 @@ const Login = () => {
   return (
     <form>
       <div className="form">
+        <h1 className="game-name">GAME NAME</h1>
         <input
           onChange={handleChange}
           type="text"

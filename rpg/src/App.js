@@ -4,14 +4,15 @@ import Login from "./components/Login";
 import PrivateRoute from "./components/PrivateRoute";
 import User from "./components/User";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Startscreen from "./components/Startscreen";
 
 function App() {
   return (
     <BrowserRouter>
-      <Login />;
       <Routes>
-        <Route />
-        <Route />
+        <Route path="/" element={<Startscreen />} />
+        <Route path="/login" exact element={<Login />} />
+        {/* <Route path="/signup" exact element={<Signup/>}/> */}
         <Route
           path="/user"
           element={
