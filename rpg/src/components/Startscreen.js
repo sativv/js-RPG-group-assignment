@@ -10,7 +10,9 @@ const Startscreen = () => {
       <btn className="form-btn sbtn" onClick={() => navigate("/login")}>
         Log In
       </btn>
-      <btn className="form-btn sbtn">Sign Up</btn>
+      <btn className="form-btn sbtn" onClick={() => navigate("/signup")}>
+        Sign Up
+      </btn>
     </div>
   );
 };

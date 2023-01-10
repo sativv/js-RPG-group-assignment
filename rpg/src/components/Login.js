@@ -1,9 +1,10 @@
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [username, setUsername] = useState("");
-
+  const navigate = useNavigate();
   const handleChange = (e) => {
     setUsername(e.target.value);
   };
@@ -52,6 +53,13 @@ const Login = () => {
 
         <button type="submit" onClick={handleSubmit} className="form-btn">
           Log In
+        </button>
+        <button
+          type="submit"
+          className="form-btn"
+          onClick={() => navigate("/signup")}
+        >
+          Sign Up
         </button>
       </div>
       ;
