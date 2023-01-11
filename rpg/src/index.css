@@ -1,0 +1,78 @@
+body {
+    background-image: url(./images/Moving_moon.gif);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    }
+    
+    .form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20%;
+    }
+    
+    .midtext {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: bold;
+      color: #000000;
+    }
+    
+    .input-container {
+      width: 300px;
+      height: 25px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: bold;
+      color: white;
+      background: linear-gradient(to right bottom, #f5a75e, #f074ea);
+    }
+    
+    .input-container:hover {
+      background: linear-gradient(to right bottom, #ff7b00, #ff00f2);
+    }
+    
+    .signup-btn {
+      border: none;
+      border-radius: 5px;
+      width: 250px;
+      height: 40px;
+      font-weight: bold;
+      font-size: 20px;
+      margin-top: 25px;
+      cursor: pointer;
+      color: #fff;
+      background: linear-gradient(to right bottom, #f5a75e, #b328ac);
+    }
+    
+    .signup-btn:hover {
+      scale: 1.03;
+      background: linear-gradient(to right bottom, #ff7b00, #ff00f2);
+    }
+    
+    .signup-btn:active {
+      scale: 0.9;
+    }
+    
+    .goback-btn {
+      border: none;
+      border-radius: 5px;
+      width: 250px;
+      height: 70px;
+      font-weight: bold;
+      font-size: 20px;
+      margin-top: 25px;
+      cursor: pointer;
+      color: #fff;
+      background: linear-gradient(to right bottom, #f5a75e, #b328ac);
+    }
+    
+    .goback-btn:hover {
+      scale: 1.03;
+      background: linear-gradient(to right bottom, #ff7b00, #ff00f2);
+    }
+    
+    .goback-btn:active {
+      scale: 0.9;
+    }
