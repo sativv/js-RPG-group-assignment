@@ -5,6 +5,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import User from "./components/User";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Startscreen from "./components/Startscreen";
+import Signup from "./components/Signup";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Startscreen />} />
         <Route path="/login" exact element={<Login />} />
-        {/* <Route path="/signup" exact element={<Signup/>}/> */}
+        <Route path="/Signup" exact element={<Signup />}/>
         <Route
           path="/user"
           element={
