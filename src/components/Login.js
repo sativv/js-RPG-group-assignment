@@ -34,6 +34,7 @@ const Login = () => {
   };
   return (
     <form>
+      <h1>HejHej</h1>
       <div className="form">
         <h1 className="game-name">GAME NAME</h1>
         <input
