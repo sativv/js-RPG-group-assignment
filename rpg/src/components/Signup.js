@@ -1,6 +1,7 @@
-import {useState} from "react";
+import { useState } from "react";
 import axios from "axios";
 import "../index.css"
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
     const [user, setUser] = useState({
@@ -8,6 +9,7 @@ const Signup = () => {
         email: "",
         password: "",
     })
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
         const name = e.target.name;
@@ -16,40 +18,37 @@ const Signup = () => {
         setUser({...user, [name]: value});
     }
 
+    const [email, setEmail] = useState("");
+    const [error, setError] = useState("");
+
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(user);
 
+        const value = e.target.value;
+        setEmail(e.target.value)
+        
+        if (
+            !/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/i.test(
+              value
+            )
+          ) {
+            setError("Invalid Email");
+          } else {
+            setError("");
+          }
 
-        // axios.post("https://localhost:3000/users", user)
-        //     .then(alert("User created!"));
 
-        setUser({
-            name: "",
-            email: "",
-            password: "",
-        })        
-    }   
-    // const [email, setEmail] = useState('');
-    // const [emailValidError, setEmailValidError] = useState('');
-
-    // const handleValidEmail = val => {
-    //     let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
-    //         // !/[a-z0-9!#$%&'*+/=?^_`{|}∼-]
-    //     if (val.length === 0) {
-    //       setEmailValidError('email address must be enter');
-    //     } else if (reg.test(val) === false) {
-    //       setEmailValidError('enter valid email address');
-    //     } else if (reg.test(val) === true) {
-    //       setEmailValidError('');
-    //     }
-    //     };
+        // axios.post("https://localhost:6001/users", user).then(alert("User Has Been Made!"))       
+    
+    };
+    
 
 
     return (
         <form>
             <div className="form">
-                {/* <div>
+                <div>
                     <input 
                         className="input-container"
                         type="text"
@@ -58,7 +57,8 @@ const Signup = () => {
                         value={user.email}
                         onChange={handleChange}
                     />
-                </div> */}
+                    <p style={{ color: "red" }}>{error && error}</p>
+                </div>
                 <div> 
                     <input 
                         className="input-container"
@@ -68,6 +68,7 @@ const Signup = () => {
                         value={user.name}
                         onChange={handleChange}
                     />
+                    <p style={{ color: "red" }}>{error && error}</p>
                 </div>
                 <div>
                     <input
@@ -78,6 +79,7 @@ const Signup = () => {
                         value={user.password}
                         onChange={handleChange}
                     />
+                    <p style={{ color: "red" }}>{error && error}</p>
                 </div>
                 <button className="signup-btn" type="submit" onClick={handleSubmit}>Sign Up</button>
             </div>
