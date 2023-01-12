@@ -7,12 +7,12 @@ const Startscreen = () => {
   return (
     <div className="start-comp">
       <h1 className="game-name">GAME NAME</h1>
-      <btn className="form-btn sbtn" onClick={() => navigate("/login")}>
+      <button className="form-btn sbtn" onClick={() => navigate("/login")}>
         Log In
-      </btn>
-      <btn className="form-btn sbtn" onClick={() => navigate("/signup")}>
+      </button>
+      <button className="form-btn sbtn" onClick={() => navigate("/signup")}>
         Sign Up
-      </btn>
+      </button>
     </div>
   );
 };

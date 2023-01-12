@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Startscreen />} />
         <Route path="/login" exact element={<Login />} />
-        <Route path="/Signup" exact element={<Signup />}/>
+        <Route path="/signup" exact element={<Signup />} />
         <Route
           path="/user"
           element={
