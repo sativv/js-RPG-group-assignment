@@ -6,6 +6,7 @@ import User from "./components/User";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Startscreen from "./components/Startscreen";
 import Signup from "./components/Signup";
+import TriviaRequest from "./components/TriviaRequest";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Startscreen />} />
         <Route path="/login" exact element={<Login />} />
         <Route path="/signup" exact element={<Signup />} />
+        <Route path="/game" exact element={<TriviaRequest />} />
         <Route
           path="/user"
           element={

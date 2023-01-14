@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import he from "he";
+import "./css/game.css";
 
 const TriviaRequest = () => {
   const [question, setQuestion] = useState("");
@@ -33,15 +34,21 @@ const TriviaRequest = () => {
 
   return (
     <>
-      <div>
-        <p>{he.decode(question)}</p>
+    <div className="game__container">
+        
+      <div className="game__item">
+        <p className="game__text">{he.decode(question)}</p>
       </div>
-      <div>
-        <p>Your answer: {answer}</p>
+
+      <div className="game__item">
+        <p className="game__text">Your answer: {answer}</p>
       </div>
-      <div>
-        <p>The correct answer is: {correctAnswer}</p>
+
+      <div className="game__item">
+        <p className="game__text">The correct answer is: {correctAnswer}</p>
       </div>
+
+      <div>
       <button
         onClick={() => {
           setAnswer("True");
@@ -62,6 +69,8 @@ const TriviaRequest = () => {
       >
         False
       </button>
+      </div>
+      </div>
     </>
   );
 };
