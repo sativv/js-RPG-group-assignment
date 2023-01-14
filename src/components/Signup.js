@@ -19,7 +19,8 @@ const Signup = () => {
     e.preventDefault();
     const user = await axios
       .get("/users")
-      .then((res) => checkEmail(res.data, email));
+      .then((res) => checkEmail(res.data, email))
+      .then(navigate("/login"));
 
     const emailRegex =
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -68,16 +69,7 @@ const Signup = () => {
           </p>
         )}
       </div>
-      <div>
-        {/* <input
-          className="input-container"
-          type="text"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        /> */}
-      </div>
-      <div>
+      {/* <div>
         <input
           className="input-container"
           type="text"
@@ -85,7 +77,7 @@ const Signup = () => {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
-      </div>
+      </div> */}
       <div>
         <input
           className="input-container"
