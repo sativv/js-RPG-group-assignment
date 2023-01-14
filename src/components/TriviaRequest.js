@@ -45,6 +45,7 @@ const TriviaRequest = () => {
       console.log("Wrong!!!");
       // removeLife 
       removeLife();
+      getTrivia();
     }
   };
 
