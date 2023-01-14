@@ -8,6 +8,7 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const checkEmail = (users) => {
     const user = users.find((user) => user.email === email);
@@ -20,16 +21,16 @@ const Signup = () => {
       .get("/users")
       .then((res) => checkEmail(res.data, email));
 
-    const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const emailRegex =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     if (!emailRegex.test(email)) {
-      setError('Invalid email address');
+      setError("Invalid email address");
       return;
     }
 
     setError(null);
     // onSubmit(email);
-
 
     if (user) {
       alert("User already exists!");
@@ -42,23 +43,30 @@ const Signup = () => {
     setEmail("");
     setPassword("");
     setError("");
-
-
-    
   };
 
   return (
     <form className="form" onSubmit={handleSubmit}>
-
       <div>
-      <input
-        className="input-container"
-        type="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="Enter your email"
-      />
-      {error && <p style={{ color: "White", fontSize: "18px", display: "flex", justifyContent: "center" }}>{error}</p>}
+        <input
+          className="input-container"
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Enter your email"
+        />
+        {error && (
+          <p
+            style={{
+              color: "White",
+              fontSize: "18px",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            {error}
+          </p>
+        )}
       </div>
       <div>
         {/* <input
@@ -69,7 +77,7 @@ const Signup = () => {
           onChange={(e) => setEmail(e.target.value)}
         /> */}
       </div>
-      <div>
+      {/* <div>
         <input
           className="input-container"
           type="text"
@@ -77,7 +85,7 @@ const Signup = () => {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
-      </div>
+      </div> */}
       <div>
         <input
           className="input-container"
