@@ -77,7 +77,7 @@ const Signup = () => {
           onChange={(e) => setEmail(e.target.value)}
         /> */}
       </div>
-      {/* <div>
+      <div>
         <input
           className="input-container"
           type="text"
@@ -85,7 +85,7 @@ const Signup = () => {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
-      </div> */}
+      </div>
       <div>
         <input
           className="input-container"
