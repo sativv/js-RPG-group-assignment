@@ -20,6 +20,17 @@ const Signup = () => {
       .get("/users")
       .then((res) => checkEmail(res.data, email));
 
+    const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    if (!emailRegex.test(email)) {
+      setError('Invalid email address');
+      return;
+    }
+
+    setError(null);
+    // onSubmit(email);
+
+
     if (user) {
       alert("User already exists!");
     } else {
@@ -30,18 +41,33 @@ const Signup = () => {
     setUsername("");
     setEmail("");
     setPassword("");
+    setError("");
+
+
+    
   };
 
   return (
-    <form className="form">
+    <form className="form" onSubmit={handleSubmit}>
+
       <div>
-        <input
+      <input
+        className="input-container"
+        type="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        placeholder="Enter your email"
+      />
+      {error && <p style={{ color: "White", fontSize: "18px", display: "flex", justifyContent: "center" }}>{error}</p>}
+      </div>
+      <div>
+        {/* <input
           className="input-container"
           type="text"
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-        />
+        /> */}
       </div>
       <div>
         <input
