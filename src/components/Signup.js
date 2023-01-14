@@ -60,16 +60,7 @@ const Signup = () => {
       />
       {error && <p style={{ color: "White", fontSize: "18px", display: "flex", justifyContent: "center" }}>{error}</p>}
       </div>
-      <div>
-        {/* <input
-          className="input-container"
-          type="text"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        /> */}
-      </div>
-      <div>
+      {/* <div>
         <input
           className="input-container"
           type="text"
@@ -77,7 +68,7 @@ const Signup = () => {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
-      </div>
+      </div> */}
       <div>
         <input
           className="input-container"
