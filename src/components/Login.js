@@ -25,7 +25,7 @@ const Login = () => {
     const user = await axios
       .get("http://localhost:6001/users")
       .then((res) => checkEmail(res.data, email))
-      .then(navigate("/game"))
+      .then(navigate("/startGame"))
       .catch((error) => {
         alert("Error");
       });
@@ -39,6 +39,7 @@ const Login = () => {
     setPassword("");
   };
 
+  // xx
   return (
     <div className="container">
       <form className="form">
