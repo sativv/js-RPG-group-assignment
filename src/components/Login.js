@@ -1,9 +1,11 @@
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const checkEmail = (users) => {
     const user = users.find(
@@ -23,6 +25,7 @@ const Login = () => {
     const user = await axios
       .get("http://localhost:6001/users")
       .then((res) => checkEmail(res.data, email))
+      .then(navigate("/game"))
       .catch((error) => {
         alert("Error");
       });
