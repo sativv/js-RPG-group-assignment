@@ -26,7 +26,7 @@ code {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20%;
+  margin-top: 10%;
 }
 .form-btn {
   width: 250px;
@@ -109,6 +109,10 @@ code {
 
 .signup-btn:active {
   scale: 0.9;
+}
+
+.login-btn {
+  margin-top: 15px;
 }
 
 .goback-btn {
