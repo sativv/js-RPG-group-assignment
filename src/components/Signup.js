@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import "../index.css";
 import { useNavigate } from "react-router-dom";
+import logo from "../images/logo.png";
 
 const Signup = () => {
   const [username, setUsername] = useState("");
@@ -48,6 +49,7 @@ const Signup = () => {
 
   return (
     <form className="form" onSubmit={handleSubmit}>
+      <img src={logo} alt="logo" height={400} width={1000} className="logo" />
       <div>
         <input
           className="input-container"

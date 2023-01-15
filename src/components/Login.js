@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import logo from "../images/logo.png";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -25,14 +26,13 @@ const Login = () => {
     const user = await axios
       .get("http://localhost:6001/users")
       .then((res) => checkEmail(res.data, email))
-      .then(navigate("/startGame"))
+
       .catch((error) => {
         alert("Error");
       });
 
     if (user.email === email && user.password === password) {
-      alert("Success!");
-
+      navigate("/startGame");
       localStorage.setItem("user", JSON.stringify(user.id));
     }
     setEmail("");
@@ -43,7 +43,7 @@ const Login = () => {
   return (
     <div className="container">
       <form className="form">
-        <h1 className="game-name">GAME NAME</h1>
+        <img src={logo} alt="logo" height={400} width={1000} className="logo" />
         <div>
           <input
             onChange={(e) => setEmail(e.target.value)}
@@ -56,13 +56,17 @@ const Login = () => {
         <div>
           <input
             onChange={(e) => setPassword(e.target.value)}
-            type="text"
+            type="password"
             value={password}
             placeholder="Password"
             className="input-field"
           />
         </div>
-        <button className="btn form-btn" type="submit" onClick={handleSubmit}>
+        <button
+          className="login-btn form-btn"
+          type="submit"
+          onClick={handleSubmit}
+        >
           Log in
         </button>
       </form>
