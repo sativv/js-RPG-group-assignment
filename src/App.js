@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Startscreen from "./components/Startscreen";
 import Signup from "./components/Signup";
 import TriviaRequest from "./components/TriviaRequest";
+import StartGame from "./components/StartGame";
 
 function App() {
   return (
@@ -16,11 +17,12 @@ function App() {
         <Route path="/login" exact element={<Login />} />
         <Route path="/signup" exact element={<Signup />} />
         <Route path="/game" exact element={<TriviaRequest />} />
+        <Route path="/startGame" exact element={<StartGame />} />
         <Route
-          path="/user"
+          path="/game"
           element={
             <PrivateRoute>
-              <User />
+              <TriviaRequest />
             </PrivateRoute>
           }
         />
