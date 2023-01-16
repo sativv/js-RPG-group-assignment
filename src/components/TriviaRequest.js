@@ -5,7 +5,7 @@ import "./css/game.css";
 import StopWatch from "./stopwatch";
 import Gameover from "./gameover";
 import logo from "../images/logo.png";
-import { BsFillPlayCircleFill } from "react-icons/bs";
+import { BsFillPlayCircleFill, BsPlay } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import bgmusic from "../components/audio/bgmusic.mp3";
@@ -14,6 +14,12 @@ const TriviaRequest = () => {
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("True");
   const [correctAnswer, setCorrectAnswer] = useState("True");
+
+  // Audio correct
+  const [audioC, setAudioC] = useState(new Audio('./audio/correct.wav'));
+  const [audioF, setAudioF] = useState(new Audio('./audio/wrong.wav'));
+
+
   const navigate = useNavigate();
 
   // const [incorrectAnswers, setIncorrectAnswers] = useState(null);
@@ -43,12 +49,14 @@ const TriviaRequest = () => {
     if (answer === correctAnswer) {
       console.log("Right!!!");
       addScore();
+      audioC.play();
       getTrivia();
       // addPoint
       addScore();
     } else {
       console.log("Wrong!!!");
       // removeLife
+      audioF.play();
       removeLife();
       getTrivia();
     }
