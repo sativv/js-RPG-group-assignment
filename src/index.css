@@ -19,14 +19,14 @@ code {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20%;
+  margin-top: 10%;
 }
 
 .start-comp {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20%;
+  margin-top: 10%;
 }
 .form-btn {
   width: 250px;
@@ -36,7 +36,7 @@ code {
   color: white;
   font-weight: bold;
   font-size: 24px;
-  margin-top: 25px;
+  margin-top: 5px;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -46,6 +46,7 @@ code {
 }
 .form-btn:hover {
   scale: 1.03;
+  background: linear-gradient(to right bottom, #ff7b00, #ff00f2);
 }
 
 .form-btn:active {
@@ -68,67 +69,71 @@ code {
 }
 
 .midtext {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bold;
-    color: #000000;
-  }
-  
-  .input-container {
-    width: 300px;
-    height: 25px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    border-radius: 10px;
-    text-align: center;
-    font-weight: bold;
-    color: white;
-    background: linear-gradient(to right bottom, #f5a75e, #f074ea);
-  }
-  
-  .input-container:hover {
-    background: linear-gradient(to right bottom, #ff7b00, #ff00f2);
-  }
-  
-  .signup-btn {
-    border: none;
-    border-radius: 5px;
-    width: 250px;
-    height: 40px;
-    font-weight: bold;
-    font-size: 20px;
-    margin-top: 25px;
-    cursor: pointer;
-    color: #fff;
-    background: linear-gradient(to right bottom, #f5a75e, #b328ac);
-  }
-  
-  .signup-btn:hover {
-    scale: 1.03;
-    background: linear-gradient(to right bottom, #ff7b00, #ff00f2);
-  }
-  
-  .signup-btn:active {
-    scale: 0.9;
-  }
-  
-  .goback-btn {
-    border: none;
-    border-radius: 5px;
-    width: 250px;
-    height: 70px;
-    font-weight: bold;
-    font-size: 20px;
-    margin-top: 25px;
-    cursor: pointer;
-    color: #fff;
-    background: linear-gradient(to right bottom, #f5a75e, #b328ac);
-  }
-  
-  .goback-btn:hover {
-    scale: 1.03;
-    background: linear-gradient(to right bottom, #ff7b00, #ff00f2);
-  }
-  
-  .goback-btn:active {
-    scale: 0.9;
-  }
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  color: #000000;
+}
+
+.input-container {
+  width: 300px;
+  height: 25px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(to right bottom, #f5a75e, #f074ea);
+}
+
+.input-container:hover {
+  background: linear-gradient(to right bottom, #ff7b00, #ff00f2);
+}
+
+.signup-btn {
+  border: none;
+  border-radius: 5px;
+  width: 250px;
+  height: 50 px;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 25px;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(to right bottom, #f5a75e, #b328ac);
+}
+
+.signup-btn:hover {
+  scale: 1.03;
+  background: linear-gradient(to right bottom, #ff7b00, #ff00f2);
+}
+
+.signup-btn:active {
+  scale: 0.9;
+}
+
+.login-btn {
+  margin-top: 15px;
+}
+
+.goback-btn {
+  border: none;
+  border-radius: 5px;
+  width: 250px;
+  height: 70px;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 25px;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(to right bottom, #f5a75e, #b328ac);
+}
+
+.goback-btn:hover {
+  scale: 1.03;
+  background: linear-gradient(to right bottom, #ff7b00, #ff00f2);
+}
+
+.goback-btn:active {
+  scale: 0.9;
+}
