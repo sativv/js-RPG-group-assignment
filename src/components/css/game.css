@@ -15,7 +15,7 @@ body {
 }
 .game__item {
   width: 900px;
-  height: 250px;
+  height: 300px;
   padding: 20px;
   border-radius: 20px;
   background: linear-gradient(
@@ -32,6 +32,10 @@ body {
   color: white;
   font-size: x-large;
   text-align: center;
+}
+
+.question {
+  height: 140px;
 }
 
 .go__modal {

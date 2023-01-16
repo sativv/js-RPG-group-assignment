@@ -24,7 +24,7 @@ const TriviaRequest = () => {
 
   const getTrivia = async () => {
     const response = await fetch(
-      "https://opentdb.com/api.php?amount=1&category=18&difficulty=easy&type=boolean"
+      "https://opentdb.com/api.php?amount=1&category=0&difficulty=easy&type=boolean"
     );
     const json = await response.json();
 
@@ -102,14 +102,16 @@ const TriviaRequest = () => {
       <div className="game__container">
         <img src={logo} alt="logo" height={400} width={1000} className="logo" />
         <div className="game__item">
-          <p className="game__text">{he.decode(question)}</p>
+          <div className="question">
+            <p className="game__text">{he.decode(question)}</p>
+          </div>
           <div className="info-flex">
             <div className="lives">
               <h2>Lives left</h2>
               <h2>{lives}</h2>
             </div>
             <div className="stopwatch">
-              <h2>Stopwatch</h2>
+              <h2>Timer</h2>
               <h2>{seconds}</h2>
             </div>
             <div className="score">
@@ -153,6 +155,7 @@ const TriviaRequest = () => {
 
       <div>
         <button className="signup-btn logout">Logout</button>
+        <button></button>
       </div>
     </>
   );

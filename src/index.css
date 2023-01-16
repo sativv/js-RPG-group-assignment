@@ -119,24 +119,55 @@ code {
 .logout {
   height: 50px;
   width: 100px;
-  float: right;
+  position: fixed;
+  bottom: 90%;
+  margin-left: 25px;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(
+    174deg,
+    rgba(63, 94, 251, 1) 1%,
+    rgb(234, 70, 252) 90%
+  );
+  box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+    rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px,
+    rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
 }
 
 .btn-true {
+  margin-top: 25px;
   color: #00f800;
   text-shadow: -1px -1px #000;
   stroke: #000;
   stroke-width: 0.5px;
   stroke-linejoin: round;
+  background: linear-gradient(
+    174deg,
+    rgba(63, 94, 251, 1) 1%,
+    rgb(234, 70, 252) 90%
+  );
+  box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+    rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px,
+    rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
 }
 
 .btn-false {
+  margin-top: 25px;
   color: red;
   text-shadow: -1px -1px #000;
   stroke: #000;
   stroke-width: 0.5px;
   stroke-linejoin: round;
   margin-left: 15px;
+  background: linear-gradient(
+    174deg,
+    rgba(63, 94, 251, 1) 1%,
+    rgb(234, 70, 252) 90%
+  );
+
+  box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+    rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px,
+    rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
 }
 
 .btn-div {
@@ -145,11 +176,13 @@ code {
 .info-flex {
   display: flex;
   justify-content: space-around;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  align-items: flex-end;
+  font-family: "K2D", sans-serif;
+  /* margin-top: 50px; */
 }
 
 .lives {
-  height: 150px;
+  height: 100px;
   width: 150px;
   border-radius: 10px;
   text-align: center;
@@ -158,7 +191,7 @@ code {
 }
 
 .stopwatch {
-  height: 150px;
+  height: 100px;
   width: 150px;
   border-radius: 10px;
   text-align: center;
@@ -167,7 +200,7 @@ code {
 }
 
 .score {
-  height: 150px;
+  height: 100px;
   width: 150px;
   border-radius: 10px;
   text-align: center;
