@@ -3,23 +3,21 @@ import he from "he";
 import "./css/game.css";
 import Lives from "./lives";
 import StopWatch from "./stopwatch";
-import Gameover from './gameover';
+import Gameover from "./gameover";
 
 const TriviaRequest = () => {
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("True");
   const [correctAnswer, setCorrectAnswer] = useState("True");
   // const [incorrectAnswers, setIncorrectAnswers] = useState(null);
-// ^ Frågor och svar
- const [seconds, setSeconds] = useState(10);
+  // ^ Frågor och svar
+  const [seconds, setSeconds] = useState(10);
   //sekundmätare
 
   const [score, setScore] = useState(0);
   //poängmätare
 
-
   const [openLoose, setOpenLoose] = useState(false);
-
 
   const [lives, setLives] = useState(3);
 
@@ -43,7 +41,7 @@ const TriviaRequest = () => {
       addScore();
     } else {
       console.log("Wrong!!!");
-      // removeLife 
+      // removeLife
       removeLife();
       getTrivia();
     }
@@ -53,120 +51,95 @@ const TriviaRequest = () => {
     getTrivia();
   }, []);
 
-
   let timer;
-    useEffect(() => {
-        timer = setInterval(() => {
-            setSeconds(seconds - 1);
+  useEffect(() => {
+    timer = setInterval(() => {
+      setSeconds(seconds - 1);
+    }, 1000);
 
-            
-        }, 1000);
+    if (seconds === 0) {
+      // setOpenLoose(true);
+      removeLife();
 
-        if (seconds === 0) {
-            
-           // setOpenLoose(true);
-            removeLife();
+      setSeconds(10);
+    }
 
-            setSeconds(10);
-        }
-
-        return () => clearInterval(timer);
-    });
-
-
-
-
-
-
-
-
+    return () => clearInterval(timer);
+  });
 
   const Restart = () => {
     setSeconds(10);
     setOpenLoose(false);
     setScore(0);
-}
-
-const addScore = () => {
-    if (seconds !== 0) {
-        setScore(score + 1);
-        setSeconds(10);
-    }
-}
-
-
-// const tjeckaliva = () => {
-//   if (lives > 0 ) {
-//   setLives(lives - 1);
-//   } else {
-//     checkLives();
-//   }
-// };
-
-
-
-
-const removeLife = () => {
-  if (lives === 1) {
-    setOpenLoose(true);
-  } else {
-    setLives(lives - 1);
   };
-};
 
+  const addScore = () => {
+    if (seconds !== 0) {
+      setScore(score + 1);
+      setSeconds(10);
+    }
+  };
 
+  // const tjeckaliva = () => {
+  //   if (lives > 0 ) {
+  //   setLives(lives - 1);
+  //   } else {
+  //     checkLives();
+  //   }
+  // };
 
-
-
-
+  const removeLife = () => {
+    if (lives === 1) {
+      setOpenLoose(true);
+    } else {
+      setLives(lives - 1);
+    }
+  };
 
   return (
     <>
-    <div className="game__container">
-        
-      <div className="game__item">
-        <p className="game__text">{he.decode(question)}</p>
-      </div>
+      <div className="game__container">
+        <div className="game__item">
+          <p className="game__text">{he.decode(question)}</p>
+        </div>
 
-      <div className="game__item">
-        <p className="game__text">Your answer: {answer}</p>
-      </div>
+        <div className="game__item">
+          <p className="game__text">Your answer: {answer}</p>
+        </div>
 
-      <div className="game__item">
-        <p className="game__text">The correct answer is: {correctAnswer}</p>
-      </div>
+        <div className="game__item">
+          <p className="game__text">The correct answer is: {correctAnswer}</p>
+        </div>
 
-      <div>
-      <button
-        onClick={() => {
-          setAnswer("True");
-          checkAnswer("True");
-          console.log({ answer });
-          console.log({ correctAnswer });
-        }}
-      >
-        True
-      </button>
-      <button
-        onClick={() => {
-          setAnswer("False");
-          checkAnswer("False");
-          console.log({ answer });
-          console.log({ correctAnswer });
-        }}
-      >
-        False
-      </button>
-      <h2>Stopwatch</h2>
-      <h2>{seconds}</h2>
-      <h2>Score</h2>
-      <h2>{score}</h2>
-      <h2>Lives left: {lives}</h2>
-      <Gameover trigger={openLoose} score={score}/>
+        <div>
+          <button
+            onClick={() => {
+              setAnswer("True");
+              checkAnswer("True");
+              console.log({ answer });
+              console.log({ correctAnswer });
+            }}
+          >
+            True
+          </button>
+          <button
+            onClick={() => {
+              setAnswer("False");
+              checkAnswer("False");
+              console.log({ answer });
+              console.log({ correctAnswer });
+            }}
+          >
+            False
+          </button>
+          <h2>Stopwatch</h2>
+          <h2>{seconds}</h2>
+          <h2>Score</h2>
+          <h2>{score}</h2>
+          <h2>Lives left: {lives}</h2>
+          <Gameover trigger={openLoose} score={score} />
+        </div>
       </div>
-      </div>
-        
-      
     </>
   );
 };
