@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import he from "he";
 import "./css/game.css";
-import Lives from "./lives";
+// import Lives from "./lives";
 import StopWatch from "./stopwatch";
 import Gameover from "./gameover";
 import logo from "../images/logo.png";
@@ -155,7 +155,9 @@ const TriviaRequest = () => {
 
       <div>
         <button className="signup-btn logout">Logout</button>
-        <button className="signup-btn sound"></button>
+        <button className="signup-btn sound">
+          {/* <BsFillPlayCircleFill /> */} music test
+        </button>
       </div>
     </>
   );
