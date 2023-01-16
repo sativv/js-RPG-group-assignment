@@ -5,11 +5,17 @@ import "./css/game.css";
 import StopWatch from "./stopwatch";
 import Gameover from "./gameover";
 import logo from "../images/logo.png";
+import { BsFillPlayCircleFill } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import bgmusic from "../components/audio/bgmusic.mp3";
 
 const TriviaRequest = () => {
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("True");
   const [correctAnswer, setCorrectAnswer] = useState("True");
+  const navigate = useNavigate();
+
   // const [incorrectAnswers, setIncorrectAnswers] = useState(null);
   // ^ Frågor och svar
   const [seconds, setSeconds] = useState(10);
@@ -154,9 +160,15 @@ const TriviaRequest = () => {
       </div>
 
       <div>
-        <button className="signup-btn logout">Logout</button>
+        <button
+          className="signup-btn logout"
+          type="submit"
+          onClick={() => navigate("/")}
+        >
+          Logout
+        </button>
         <button className="signup-btn sound">
-          {/* <BsFillPlayCircleFill /> */} music test
+          <BsFillPlayCircleFill />
         </button>
       </div>
     </>
