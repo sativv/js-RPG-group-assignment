@@ -35,7 +35,7 @@ const TriviaRequest = () => {
 
   const getTrivia = async () => {
     const response = await fetch(
-      "https://opentdb.com/api.php?amount=1&category=0&difficulty=easy&type=boolean"
+      "https://opentdb.com/api.php?amount=1&category=0&difficulty=easy&type=boolean&random=true"
     );
     const json = await response.json();
 
