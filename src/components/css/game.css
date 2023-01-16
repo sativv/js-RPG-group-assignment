@@ -79,3 +79,8 @@ body {
 .game__text {
   font-family: "K2D", sans-serif;
 }
+
+.go_text {
+  font-size: 46px;
+  text-transform: uppercase;
+}
