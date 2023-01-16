@@ -109,7 +109,7 @@ const TriviaRequest = () => {
       setLives(lives - 1);
     }
   };
-  const [audioB, setAudioB] = useState(new Audio("./audio/bgmusic.mp3"));
+  // const [audioB, setAudioB] = useState(new Audio("./audio/bgmusic.mp3"));
 
   return (
     <>
@@ -175,9 +175,9 @@ const TriviaRequest = () => {
         >
           Logout
         </button>
-        <button className="signup-btn sound" onClick={() => audioB.play()}>
+        {/* <button className="signup-btn sound" onClick={() => audioB.play()}>
           <BsFillPlayCircleFill />
-        </button>
+        </button> */}
       </div>
     </>
   );
