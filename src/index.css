@@ -121,7 +121,7 @@ code {
   height: 50px;
   width: 100px;
   position: fixed;
-  bottom: 90%;
+  bottom: 70%;
   margin-left: 25px;
   cursor: pointer;
   color: #fff;
@@ -153,6 +153,43 @@ code {
     rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
 }
 
+.buttonflex {
+  display: flex;
+}
+
+.volumeup {
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  margin-left: 25px;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(
+    174deg,
+    rgba(63, 94, 251, 1) 1%,
+    rgb(234, 70, 252) 90%
+  );
+  box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+    rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px,
+    rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+}
+
+.volumedown {
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  margin-left: 80px;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(
+    174deg,
+    rgba(63, 94, 251, 1) 1%,
+    rgb(234, 70, 252) 90%
+  );
+  box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+    rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px,
+    rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+}
 .btn-true {
   margin-top: 25px;
   color: #00f800;

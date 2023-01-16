@@ -35,10 +35,10 @@ const changeVolumeP = () => {
         <button className="signup-btn sound" onClick={() => playMusic()}>
             {iconState}
         </button>
-
-        <button className="signup-btn volume" onClick={() => changeVolumeP()}>Volume +</button>
-        <button className="signup-btn volume" onClick={() => changeVolumeM()}>Volume -</button>
-
+        <div className="buttonflex">
+        <button className="signup-btn volumeup" onClick={() => changeVolumeP()}>+</button>
+        <button className="signup-btn volumedown" onClick={() => changeVolumeM()}>-</button>
+        </div>
 
       </>
 
