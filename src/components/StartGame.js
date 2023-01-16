@@ -6,7 +6,7 @@ const StartGame = () => {
   const navigate = useNavigate();
   return (
     <div className="form">
-      <img src={logo} alt="logo" height={400} width={1000} className="logo" />
+      <img src={logo} alt="logo" height={150} width={600} className="logo" />
       <button className="form-btn sbtn" onClick={() => navigate("/game")}>
         Start Game
       </button>

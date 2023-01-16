@@ -7,16 +7,16 @@ const Startscreen = () => {
 
   return (
     <div className="start-comp">
-      <img src={logo} alt="logo" height={400} width={1000} className="logo" />
+      <img src={logo} alt="logo" height={150} width={600} className="logo" />
       <button className="form-btn sbtn" onClick={() => navigate("/login")}>
         Log In
       </button>
       <button className="form-btn sbtn" onClick={() => navigate("/signup")}>
         Sign Up
       </button>
-      <button className="form-btn sbtn" onClick={() => navigate("/game")}>
+      {/* <button className="form-btn sbtn" onClick={() => navigate("/game")}>
         Game
-      </button>
+      </button> */}
     </div>
   );
 };
