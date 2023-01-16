@@ -58,6 +58,7 @@ const TriviaRequest = () => {
       audioF.play();
       removeLife();
       getTrivia();
+      setSeconds(10);
     }
   };
 
@@ -68,13 +69,13 @@ const TriviaRequest = () => {
   let timer;
   useEffect(() => {
     timer = setInterval(() => {
-      setSeconds(seconds + 1);
+      setSeconds(seconds - 1);
     }, 1000);
 
     if (seconds === 0) {
       // setOpenLoose(true);
       removeLife();
-
+      audioF.play();
       setSeconds(10);
     }
 
