@@ -11,9 +11,9 @@ const Gameover = ({ trigger, score }) => {
         <h1 className="go__head__text go_text">Game Over!</h1>
         <h2 className="go__head__text">Your score: {score}</h2>
         <Link to ="/startGame">
-        <button className="form-btn">
-          Restart
-        </button>
+          <button className="form-btn">
+            Restart
+          </button>
         </Link>
 
       </div>
