@@ -22,7 +22,7 @@ const Bgmusic = () => {
         <>
         <button className="signup-btn sound" onClick={() => playMusic()}>
             {iconState}
-        </button>/button>
+        </button>
       </>
 
     );
