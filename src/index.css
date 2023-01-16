@@ -5,7 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url(./images/Moving\ moon.gif);
+  background-image: url(./images/bg.gif);
+
   background-repeat: no-repeat;
   background-size: 100%;
 }
