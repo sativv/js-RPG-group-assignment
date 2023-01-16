@@ -8,10 +8,14 @@ import Startscreen from "./components/Startscreen";
 import Signup from "./components/Signup";
 import TriviaRequest from "./components/TriviaRequest";
 import StartGame from "./components/StartGame";
+import Bgmusic from "./components/bgmusic";
+import { BsFillPlayCircleFill, BsPlay } from "react-icons/bs";
+
 
 function App() {
   return (
     <BrowserRouter>
+    <Bgmusic/>
       <Routes>
         <Route path="/" element={<Startscreen />} />
         <Route path="/login" exact element={<Login />} />
