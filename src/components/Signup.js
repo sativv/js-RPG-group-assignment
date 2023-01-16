@@ -49,7 +49,7 @@ const Signup = () => {
 
   return (
     <form className="form" onSubmit={handleSubmit}>
-      <img src={logo} alt="logo" height={400} width={1000} className="logo" />
+      <img src={logo} alt="logo" height={150} width={600} className="logo" />
       <div>
         <input
           className="input-container"

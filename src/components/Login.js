@@ -43,7 +43,7 @@ const Login = () => {
   return (
     <div className="container">
       <form className="form">
-        <img src={logo} alt="logo" height={400} width={1000} className="logo" />
+        <img src={logo} alt="logo" height={150} width={600} className="logo" />
         <div>
           <input
             onChange={(e) => setEmail(e.target.value)}
