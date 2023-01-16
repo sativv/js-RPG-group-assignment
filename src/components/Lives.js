@@ -1,30 +1,30 @@
-import React, { useState } from "react";
-import "./index.css"; // Importing styles for heart icon
+// import React, { useState } from "react";
+// import "./index.css"; // Importing styles for heart icon
 
-const Lives = () => {
-  const [lives, setLives] = useState(3); // Initial number of lives
+// const Lives = () => {
+//   const [lives, setLives] = useState(3); // Initial number of lives
 
-  const decrementLives = () => {
-    if (lives > 0) {
-      setLives(lives - 1);
-    }
-  };
+//   const decrementLives = () => {
+//     if (lives > 0) {
+//       setLives(lives - 1);
+//     }
+//   };
 
-  return (
-    <div>
-      <button onClick={decrementLives}>Decrement Lives</button>
-      <div className="lives-container">
-        {Array(lives)
-          .fill()
-          .map((_, index) => (
-            <div key={index} className="heart-icon" />
-          ))}
-      </div>
-    </div>
-  );
-};
+//   return (
+//     <div>
+//       <button onClick={decrementLives}>Decrement Lives</button>
+//       <div className="lives-container">
+//         {Array(lives)
+//           .fill()
+//           .map((_, index) => (
+//             <div key={index} className="heart-icon" />
+//           ))}
+//       </div>
+//     </div>
+//   );
+// };
 
-export default Lives;
+// export default Lives;
 
 // FOR JSX
 // import React, { useState } from 'react';
