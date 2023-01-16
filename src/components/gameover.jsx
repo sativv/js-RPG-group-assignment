@@ -3,7 +3,7 @@ const Gameover = ({ trigger, score }) => {
   return (
     <div className="go__modal">
       <div className="go__modal__content">
-        <h1>Game Over!</h1>
+        <h1 className="go__head__tex">Game Over!</h1>
         <h2>Your score: {score}</h2>
         <button onClick={() => window.location.reload()} className="form-btn">
           Restart

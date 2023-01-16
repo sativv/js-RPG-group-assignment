@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "K2D",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -12,7 +12,7 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+    monospace, "K2D";
 }
 
 .form {
@@ -94,7 +94,7 @@ code {
   border: none;
   border-radius: 5px;
   width: 250px;
-  height: 50 px;
+  height: 50px;
   font-weight: bold;
   font-size: 20px;
   margin-top: 25px;
@@ -116,24 +116,94 @@ code {
   margin-top: 15px;
 }
 
-.goback-btn {
-  border: none;
-  border-radius: 5px;
-  width: 250px;
-  height: 70px;
-  font-weight: bold;
-  font-size: 20px;
-  margin-top: 25px;
+.logout {
+  height: 50px;
+  width: 100px;
+  position: fixed;
+  bottom: 90%;
+  margin-left: 25px;
   cursor: pointer;
   color: #fff;
-  background: linear-gradient(to right bottom, #f5a75e, #b328ac);
+  background: linear-gradient(
+    174deg,
+    rgba(63, 94, 251, 1) 1%,
+    rgb(234, 70, 252) 90%
+  );
+  box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+    rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px,
+    rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
 }
 
-.goback-btn:hover {
-  scale: 1.03;
-  background: linear-gradient(to right bottom, #ff7b00, #ff00f2);
+.btn-true {
+  margin-top: 25px;
+  color: #00f800;
+  text-shadow: -1px -1px #000;
+  stroke: #000;
+  stroke-width: 0.5px;
+  stroke-linejoin: round;
+  background: linear-gradient(
+    174deg,
+    rgba(63, 94, 251, 1) 1%,
+    rgb(234, 70, 252) 90%
+  );
+  box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+    rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px,
+    rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
 }
 
-.goback-btn:active {
-  scale: 0.9;
+.btn-false {
+  margin-top: 25px;
+  color: red;
+  text-shadow: -1px -1px #000;
+  stroke: #000;
+  stroke-width: 0.5px;
+  stroke-linejoin: round;
+  margin-left: 15px;
+  background: linear-gradient(
+    174deg,
+    rgba(63, 94, 251, 1) 1%,
+    rgb(234, 70, 252) 90%
+  );
+
+  box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+    rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px,
+    rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+}
+
+.btn-div {
+}
+
+.info-flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  font-family: "K2D", sans-serif;
+  /* margin-top: 50px; */
+}
+
+.lives {
+  height: 100px;
+  width: 150px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+
+.stopwatch {
+  height: 100px;
+  width: 150px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+
+.score {
+  height: 100px;
+  width: 150px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
 }

@@ -4,6 +4,7 @@ import "./css/game.css";
 import Lives from "./lives";
 import StopWatch from "./stopwatch";
 import Gameover from "./gameover";
+import logo from "../images/logo.png";
 
 const TriviaRequest = () => {
   const [question, setQuestion] = useState("");
@@ -23,7 +24,7 @@ const TriviaRequest = () => {
 
   const getTrivia = async () => {
     const response = await fetch(
-      "https://opentdb.com/api.php?amount=1&category=0&difficulty=hard&type=boolean"
+      "https://opentdb.com/api.php?amount=1&category=0&difficulty=easy&type=boolean"
     );
     const json = await response.json();
 
@@ -54,7 +55,7 @@ const TriviaRequest = () => {
   let timer;
   useEffect(() => {
     timer = setInterval(() => {
-      setSeconds(seconds - 1);
+      setSeconds(seconds + 1);
     }, 1000);
 
     if (seconds === 0) {
@@ -99,20 +100,34 @@ const TriviaRequest = () => {
   return (
     <>
       <div className="game__container">
+        <img src={logo} alt="logo" height={400} width={1000} className="logo" />
         <div className="game__item">
-          <p className="game__text">{he.decode(question)}</p>
+          <div className="question">
+            <p className="game__text">{he.decode(question)}</p>
+          </div>
+          <div className="info-flex">
+            <div className="lives">
+              <h2>Lives left</h2>
+              <h2>{lives}</h2>
+            </div>
+            <div className="stopwatch">
+              <h2>Timer</h2>
+              <h2>{seconds}</h2>
+            </div>
+            <div className="score">
+              <h2>Score</h2>
+              <h2>{score}</h2>
+            </div>
+          </div>
         </div>
 
-        <div className="game__item">
+        {/* <div className="game__item">
           <p className="game__text">Your answer: {answer}</p>
-        </div>
-
-        <div className="game__item">
-          <p className="game__text">The correct answer is: {correctAnswer}</p>
-        </div>
+        </div> */}
 
         <div>
           <button
+            className="form-btn btn-true"
             onClick={() => {
               setAnswer("True");
               checkAnswer("True");
@@ -123,6 +138,7 @@ const TriviaRequest = () => {
             True
           </button>
           <button
+            className="form-btn btn-false"
             onClick={() => {
               setAnswer("False");
               checkAnswer("False");
@@ -132,13 +148,14 @@ const TriviaRequest = () => {
           >
             False
           </button>
-          <h2>Stopwatch</h2>
-          <h2>{seconds}</h2>
-          <h2>Score</h2>
-          <h2>{score}</h2>
-          <h2>Lives left: {lives}</h2>
+
           <Gameover trigger={openLoose} score={score} />
         </div>
+      </div>
+
+      <div>
+        <button className="signup-btn logout">Logout</button>
+        <button></button>
       </div>
     </>
   );
