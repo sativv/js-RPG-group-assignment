@@ -16,9 +16,8 @@ const TriviaRequest = () => {
   const [correctAnswer, setCorrectAnswer] = useState("True");
 
   // Audio correct
-  const [audioC, setAudioC] = useState(new Audio('./audio/correct.wav'));
-  const [audioF, setAudioF] = useState(new Audio('./audio/wrong.wav'));
-
+  const [audioC, setAudioC] = useState(new Audio("./audio/correct.wav"));
+  const [audioF, setAudioF] = useState(new Audio("./audio/wrong.wav"));
 
   const navigate = useNavigate();
 
@@ -110,6 +109,7 @@ const TriviaRequest = () => {
       setLives(lives - 1);
     }
   };
+  const [audioB, setAudioB] = useState(new Audio("./audio/bgmusic.mp3"));
 
   return (
     <>
@@ -175,7 +175,7 @@ const TriviaRequest = () => {
         >
           Logout
         </button>
-        <button className="signup-btn sound">
+        <button className="signup-btn sound" onClick={() => audioB.play()}>
           <BsFillPlayCircleFill />
         </button>
       </div>
