@@ -10,7 +10,7 @@ const SoundEffect = () => {
   return (
     <div>
       <button onClick={playSound}>Play Sound</button>
-      <audio ref={audioRef} src="sound-effect.mp3" />
+      <audio ref={audioRef} src="./audio/correct.wav" />
     </div>
   );
 };
