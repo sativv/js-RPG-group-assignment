@@ -100,7 +100,7 @@ const TriviaRequest = () => {
   return (
     <>
       <div className="game__container">
-        <img src={logo} alt="logo" height={400} width={1000} className="logo" />
+        <img src={logo} alt="logo" height={150} width={600} className="logo" />
         <div className="game__item">
           <div className="question">
             <p className="game__text">{he.decode(question)}</p>
@@ -155,7 +155,7 @@ const TriviaRequest = () => {
 
       <div>
         <button className="signup-btn logout">Logout</button>
-        <button></button>
+        <button className="signup-btn sound"></button>
       </div>
     </>
   );
