@@ -4,29 +4,29 @@ import { BsFillPlayCircleFill, BsFillPauseCircleFill } from "react-icons/bs";
 const Bgmusic = () => {
     const [audioB, setAudioB] = useState(new Audio("./audio/bgmusic.mp3",));
     const [playState, setPlayState] = useState("pause");
-    const [iconState, setIconState] = useState(<BsFillPlayCircleFill />)
-    const [volumeB, setVolumeB] = useState(0.1);
+    const [iconState, setIconState] = useState(<BsFillPlayCircleFill />);
+    const [volumeB, setVolumeB] = useState(0.5);
 
     const playMusic = () => {
 
     if(playState === "pause") {
         audioB.play();
         setPlayState("play");
-        setIconState(<BsFillPauseCircleFill />)
+        setIconState(<BsFillPauseCircleFill />);
     } else {
         audioB.pause();
         setPlayState("pause");
-        setIconState(<BsFillPlayCircleFill />)
+        setIconState(<BsFillPlayCircleFill />);
     }
 };
 
 const changeVolumeP = () => { 
-    setVolumeB(volumeB + 0.1)
+    setVolumeB(volumeB + 0.1);
     audioB.volume = volumeB;
  };
 
  const changeVolumeM = () => { 
-    setVolumeB(volumeB - 0.1)
+    setVolumeB(volumeB - 0.1);
     audioB.volume = volumeB;
  };
 
