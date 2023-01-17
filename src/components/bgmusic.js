@@ -13,10 +13,13 @@ const Bgmusic = () => {
         audioB.play();
         setPlayState("play");
         setIconState(<BsFillPauseCircleFill />);
+        audioB.volume = 0.5;
     } else {
         audioB.pause();
         setPlayState("pause");
         setIconState(<BsFillPlayCircleFill />);
+        audioB.volume = 0.5;
+
     }
 };
 
