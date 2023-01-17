@@ -290,7 +290,9 @@ code {
   color: white;
 }
 
-#logo {
+/* THIS IS FOR LOGO ANIMATION */
+
+/* #logo {
   animation: grow-shrink 1s infinite;
 }
 
@@ -304,4 +306,4 @@ code {
   100% {
     transform: scale(1);
   }
-}
+} */

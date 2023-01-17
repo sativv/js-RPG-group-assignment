@@ -1,20 +1,20 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../images/logo.png";
-import bgvideo from "../video/bgmovie.mp4";
+// import bgvideo from "../video/bgmovie.mp4";
 
 const Startscreen = () => {
   const navigate = useNavigate();
 
   return (
     <div className="start-comp">
-      <video
+      {/* <video
         className="bg__game"
         src={bgvideo}
         autoPlay="{true}"
         loop
         muted
-      ></video>
+      ></video> */}
       <img
         src={logo}
         alt="logo"

@@ -8,7 +8,7 @@ import logo from "../images/logo.png";
 import { BsFillPlayCircleFill, BsPlay } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-// import bgvideo from "../video/bgmovie.mp4";
+import bgvideo from "../video/bgmovie.mp4";
 
 const TriviaRequest = () => {
   const [question, setQuestion] = useState("");
@@ -109,8 +109,13 @@ const TriviaRequest = () => {
 
   return (
     <>
-      {/* <video className="bg__game" src={bgvideo} autoPlay="{true}" loop muted>
-    </video> */}
+      <video
+        className="bg__game"
+        src={bgvideo}
+        autoPlay="{true}"
+        loop
+        muted
+      ></video>
       <div className="game__container">
         <img
           src={logo}

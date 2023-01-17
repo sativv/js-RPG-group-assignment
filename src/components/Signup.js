@@ -3,7 +3,7 @@ import axios from "axios";
 import "../index.css";
 import { useNavigate } from "react-router-dom";
 import logo from "../images/logo.png";
-import bgvideo from "../video/bgmovie.mp4";
+// import bgvideo from "../video/bgmovie.mp4";
 
 const Signup = () => {
   const [username, setUsername] = useState("");
@@ -50,13 +50,13 @@ const Signup = () => {
 
   return (
     <form className="form" onSubmit={handleSubmit}>
-      <video
+      {/* <video
         className="bg__game"
         src={bgvideo}
         autoPlay="{true}"
         loop
         muted
-      ></video>
+      ></video> */}
       <img
         src={logo}
         alt="logo"
