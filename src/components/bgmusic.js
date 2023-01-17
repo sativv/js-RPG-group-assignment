@@ -10,28 +10,37 @@ const Bgmusic = () => {
     const playMusic = () => {
 
     if(playState === "pause") {
-        audioB.play();
         setPlayState("play");
         setIconState(<BsFillPauseCircleFill />);
-        audioB.volume = 0.5;
+        audioB.play();
     } else {
         audioB.pause();
         setPlayState("pause");
         setIconState(<BsFillPlayCircleFill />);
-        audioB.volume = 0.5;
 
-    }
+    };
 };
 
 const changeVolumeP = () => { 
-    setVolumeB(volumeB + 0.1);
+    if(volumeB < 1) {
+    const newVolume = volumeB + 0.1;
+    setVolumeB(Math.round(newVolume * 100) / 100);
     audioB.volume = volumeB;
+
+    };
  };
 
  const changeVolumeM = () => { 
-    setVolumeB(volumeB - 0.1);
-    audioB.volume = volumeB;
+    if(volumeB > 0.1) {
+        const newVolume = volumeB - 0.1;
+        setVolumeB(Math.round(newVolume * 100) / 100);
+        audioB.volume = volumeB;
+    };
  };
+
+let volumePercent = volumeB * 100;
+let roundedVolume = Math.floor(volumePercent);
+
 
     return (
         <>
@@ -41,6 +50,7 @@ const changeVolumeP = () => {
                
         <button className="signup-btn volumeup" onClick={() => changeVolumeP()}>+</button>
         <button className="signup-btn volumedown" onClick={() => changeVolumeM()}>-</button>
+        <h1 className="volumep">{roundedVolume}%</h1>
 
       </>
 
