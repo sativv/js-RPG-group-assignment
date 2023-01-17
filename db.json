@@ -11,24 +11,6 @@
       "email": "felix@hotmail.com",
       "password": "12345",
       "id": 3
-    },
-    {
-      "username": "",
-      "email": "david@hotmail.commm",
-      "password": "12345",
-      "id": 4
-    },
-    {
-      "username": "",
-      "email": "abc@abc.abc",
-      "password": "abcabc",
-      "id": 5
-    },
-    {
-      "username": "",
-      "email": "felle@felle.com",
-      "password": "awdawd",
-      "id": 6
     }
   ]
 }
