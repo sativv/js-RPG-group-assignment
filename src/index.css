@@ -20,14 +20,14 @@ code {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 10%;
+  /* margin-top: 10%; */
 }
 
 .start-comp {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 10%;
+  /* margin-top: 10%; */
 }
 .form-btn {
   width: 250px;
@@ -164,6 +164,7 @@ code {
   height: 45px;
   width: 45px;
   position: fixed;
+  margin-top: 20px;
   margin-left: 25px;
   cursor: pointer;
   color: #fff;
@@ -181,8 +182,29 @@ code {
   height: 45px;
   width: 45px;
   position: fixed;
+  margin-top: 20px;
   margin-left: 75px;
   cursor: pointer;
+  color: #fff;
+  background: linear-gradient(
+    174deg,
+    rgba(63, 94, 251, 1) 1%,
+    rgb(234, 70, 252) 90%
+  );
+  box-shadow: rgba(240, 46, 170, 0.4) -0px 5px,
+    rgba(240, 46, 170, 0.3) -0px 10px, rgba(240, 46, 170, 0.2) -0px 15px,
+    rgba(240, 46, 170, 0.1) -0px 20px, rgba(240, 46, 170, 0.05) -0px 25px;
+}
+
+.volumep {
+  width: 40px;
+  border-radius: 10px;
+  padding: 5px;
+  margin-left: 130px;
+  margin-top: 25px;
+  position: fixed;
+  font-size: medium;
+  text-align: center;
   color: #fff;
   background: linear-gradient(
     174deg,
@@ -267,23 +289,4 @@ code {
   text-align: center;
   font-weight: bold;
   color: white;
-}
-
-.volumep {
-  border-radius: 10px;
-  padding: 5px;
-  position: fixed;
-  margin-left: 130px;
-  margin-top: 30px;
-  font-size: medium;
-  text-align: center;
-  color: #fff;
-  background: linear-gradient(
-    174deg,
-    rgba(63, 94, 251, 1) 1%,
-    rgb(234, 70, 252) 90%
-  );
-  box-shadow: rgba(240, 46, 170, 0.4) -0px 5px,
-    rgba(240, 46, 170, 0.3) -0px 10px, rgba(240, 46, 170, 0.2) -0px 15px,
-    rgba(240, 46, 170, 0.1) -0px 20px, rgba(240, 46, 170, 0.05) -0px 25px;
 }
