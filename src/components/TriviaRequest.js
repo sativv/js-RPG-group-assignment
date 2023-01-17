@@ -77,7 +77,6 @@ const TriviaRequest = () => {
     if (seconds === 0) {
       // setOpenLoose(true);
       removeLife();
-      audioF.play();
       setSeconds(10);
     }
 
@@ -97,19 +96,15 @@ const TriviaRequest = () => {
     }
   };
 
-  // const tjeckaliva = () => {
-  //   if (lives > 0 ) {
-  //   setLives(lives - 1);
-  //   } else {
-  //     checkLives();
-  //   }
-  // };
 
   const removeLife = () => {
     if (lives === 1) {
       setOpenLoose(true);
     } else {
       setLives(lives - 1);
+      audioF.volume = 0.2;
+      audioF.play();
+
     }
   };
   // const [audioB, setAudioB] = useState(new Audio("./audio/bgmusic.mp3"));
@@ -138,9 +133,6 @@ const TriviaRequest = () => {
           </div>
         </div>
 
-        {/* <div className="game__item">
-          <p className="game__text">Your answer: {answer}</p>
-        </div> */}
 
         <div>
           <button
@@ -148,8 +140,6 @@ const TriviaRequest = () => {
             onClick={() => {
               setAnswer("True");
               checkAnswer("True");
-              console.log({ answer });
-              console.log({ correctAnswer });
             }}
           >
             True
@@ -159,8 +149,6 @@ const TriviaRequest = () => {
             onClick={() => {
               setAnswer("False");
               checkAnswer("False");
-              console.log({ answer });
-              console.log({ correctAnswer });
             }}
           >
             False
