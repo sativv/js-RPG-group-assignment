@@ -49,6 +49,7 @@ const TriviaRequest = () => {
       console.log("Right!!!");
       addScore();
       audioC.play();
+      audioC.volume = 0.2;
       getTrivia();
       // addPoint
       addScore();
@@ -56,8 +57,10 @@ const TriviaRequest = () => {
       console.log("Wrong!!!");
       // removeLife
       audioF.play();
+      audioF.volume = 0.2;
       removeLife();
       getTrivia();
+      setSeconds(10);
     }
   };
 
@@ -68,13 +71,13 @@ const TriviaRequest = () => {
   let timer;
   useEffect(() => {
     timer = setInterval(() => {
-      setSeconds(seconds + 1);
+      setSeconds(seconds - 1);
     }, 1000);
 
     if (seconds === 0) {
       // setOpenLoose(true);
       removeLife();
-
+      audioF.play();
       setSeconds(10);
     }
 
