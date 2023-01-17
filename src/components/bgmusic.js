@@ -44,14 +44,13 @@ let roundedVolume = Math.floor(volumePercent);
 
     return (
         <>
-        <button className="signup-btn sound" onClick={() => playMusic()}>
-            {iconState}
-        </button>
-               
         <button className="signup-btn volumeup" onClick={() => changeVolumeP()}>+</button>
         <button className="signup-btn volumedown" onClick={() => changeVolumeM()}>-</button>
         <h1 className="volumep">{roundedVolume}%</h1>
 
+        <button className="signup-btn sound" onClick={() => playMusic()}>
+            {iconState}
+        </button>
       </>
 
     );
