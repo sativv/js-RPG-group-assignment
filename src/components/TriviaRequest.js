@@ -112,10 +112,8 @@ const TriviaRequest = () => {
 
   return (
     <>
-    <video className="bg__game" src={bgvideo}
-                autoPlay="{true}" loop muted
-                >
-    </video>   
+    <video className="bg__game" src={bgvideo} autoPlay="{true}" loop muted>
+    </video>
       <div className="game__container">
         <img src={logo} alt="logo" height={150} width={600} className="logo" />
         <div className="game__item">
