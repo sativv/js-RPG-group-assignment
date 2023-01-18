@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import logo from "../images/logo.png";
-// import bgvideo from "../video/bgmovie.mp4";
+import bgvideo from "../video/bgmovie.mp4";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -43,13 +43,13 @@ const Login = () => {
   // xx
   return (
     <div className="container">
-      {/* <video
+      <video
         className="bg__game"
         src={bgvideo}
         autoPlay="{true}"
         loop
         muted
-      ></video> */}
+      ></video>
 
       <form className="form">
         <img

@@ -292,7 +292,7 @@ code {
 
 /* THIS IS FOR LOGO ANIMATION */
 
-/* #logo {
+#logo {
   animation: grow-shrink 1s infinite;
 }
 
@@ -306,4 +306,4 @@ code {
   100% {
     transform: scale(1);
   }
-} */
+}
