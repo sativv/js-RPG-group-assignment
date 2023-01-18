@@ -77,6 +77,7 @@ const TriviaRequest = () => {
     if (seconds === 0) {
       // setOpenLoose(true);
       removeLife();
+      getTrivia();
       setSeconds(10);
     }
 
