@@ -10,7 +10,6 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import bgvideo from "../video/bgmovie.mp4";
 
-
 const TriviaRequest = () => {
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("True");
@@ -97,7 +96,6 @@ const TriviaRequest = () => {
     }
   };
 
-
   const removeLife = () => {
     if (lives === 1) {
       setOpenLoose(true);
@@ -105,17 +103,28 @@ const TriviaRequest = () => {
       setLives(lives - 1);
       audioF.volume = 0.2;
       audioF.play();
-
     }
   };
   // const [audioB, setAudioB] = useState(new Audio("./audio/bgmusic.mp3"));
 
   return (
     <>
-    <video className="bg__game" src={bgvideo} autoPlay="{true}" loop muted>
-    </video>
+      <video
+        className="bg__game"
+        src={bgvideo}
+        autoPlay="{true}"
+        loop
+        muted
+      ></video>
       <div className="game__container">
-        <img src={logo} alt="logo" height={150} width={600} className="logo" />
+        <img
+          src={logo}
+          alt="logo"
+          height={150}
+          width={600}
+          className="logo"
+          id="logo"
+        />
         <div className="game__item">
           <div className="question">
             <p className="game__text">{he.decode(question)}</p>
@@ -135,7 +144,6 @@ const TriviaRequest = () => {
             </div>
           </div>
         </div>
-
 
         <div>
           <button
@@ -173,7 +181,6 @@ const TriviaRequest = () => {
           <BsFillPlayCircleFill />
         </button> */}
       </div>
-
     </>
   );
 };
